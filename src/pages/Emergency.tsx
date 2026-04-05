@@ -1,94 +1,148 @@
 import Header from "@/components/Header";
-import { Link } from "react-router-dom";
 
 const Emergency = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Header */}
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
 
-      {/* Main Content */}
       <main className="flex-1">
-        <div className="max-w-3xl mx-auto px-4 py-8">
-          <img 
-            src="https://pbs.twimg.com/media/GKiGsyybIAAM4Su?format=jpg&name=medium" 
-            alt="Emergency medical services and first aid" 
-            className="w-full h-48 object-cover rounded mb-6"
+        <div className="max-w-6xl mx-auto px-4 py-10">
+
+          <img
+            src="https://uploaded.kcampus.kr/shutterstock_2034258953_f62c08c482.jpg"
+            alt="Emergency services"
+            className="w-full h-56 object-cover rounded-xl mb-10"
           />
-          <h1 className="text-3xl font-bold text-foreground mb-6">Emergency Information</h1>
-          
-          <p className="text-foreground mb-4">
-            In case of an emergency in South Korea, knowing the right numbers to call and procedures 
-            to follow can make a significant difference. Save these numbers in your phone and 
-            familiarize yourself with the information below.
+
+          <h1 className="text-3xl font-bold text-black mb-6">
+            Emergency Information
+          </h1>
+
+          <p className="text-gray-700 mb-10 max-w-3xl">
+            In emergency situations, knowing what to do and who to call is critical. Save these numbers and understand the basic procedures before you actually need them.
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">Emergency Phone Numbers</h2>
-          <ul className="text-foreground mb-4 space-y-2">
-            <li><strong>112</strong> — Police (available 24/7, some English support)</li>
-            <li><strong>119</strong> — Fire and Ambulance (medical emergencies)</li>
-            <li><strong>1339</strong> — Medical Emergency Counseling (English available)</li>
-            <li><strong>1345</strong> — Immigration Contact Center (visa and ARC issues)</li>
-            <li><strong>120</strong> — Dasan Call Center (general government inquiries)</li>
-            <li><strong>1588-0082</strong> — Korea Tourism Helpline (tourist assistance)</li>
-          </ul>
+          {/* EMERGENCY NUMBERS */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold text-black mb-6">
+              Emergency Numbers
+            </h2>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">What to Do in a Medical Emergency</h2>
-          <ol className="list-decimal list-inside text-foreground mb-4 space-y-2">
-            <li>Call 119 for an ambulance</li>
-            <li>State your location clearly (address or nearby landmarks)</li>
-            <li>Describe the nature of the emergency</li>
-            <li>Stay on the line until help arrives</li>
-            <li>If possible, have someone meet the ambulance at the entrance</li>
-          </ol>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="border rounded-xl p-5">
+                <h3 className="text-xl font-bold text-red-600">119</h3>
+                <p className="text-sm text-gray-600 mt-2">
+                  Fire and Ambulance
+                </p>
+              </div>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">Hospitals with English Service</h2>
-          <p className="text-foreground mb-4">
-            Major hospitals in Seoul and other cities often have international clinics with 
-            English-speaking staff. Examples include Severance Hospital, Samsung Medical Center, 
-            and Asan Medical Center. Your university health center can also provide referrals.
-          </p>
+              <div className="border rounded-xl p-5">
+                <h3 className="text-xl font-bold text-blue-700">112</h3>
+                <p className="text-sm text-gray-600 mt-2">
+                  Police
+                </p>
+              </div>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">Natural Disasters</h2>
-          <p className="text-foreground mb-4">
-            South Korea experiences typhoons (summer/fall) and occasional earthquakes. When a 
-            disaster warning is issued:
-          </p>
-          <ul className="list-disc list-inside text-foreground mb-4 space-y-2">
-            <li>Follow instructions from emergency broadcasts</li>
-            <li>Stay indoors and away from windows during typhoons</li>
-            <li>In an earthquake, take cover under sturdy furniture</li>
-            <li>Know the location of your building's emergency shelter</li>
-            <li>Keep an emergency kit with water, food, and first aid supplies</li>
-          </ul>
+              <div className="border rounded-xl p-5">
+                <h3 className="text-xl font-bold text-black">1330</h3>
+                <p className="text-sm text-gray-600 mt-2">
+                  Travel Hotline (multi-language)
+                </p>
+              </div>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">Crime and Safety</h2>
-          <p className="text-foreground mb-4">
-            South Korea is generally very safe, but petty crime can occur. If you are a victim 
-            of crime, call 112 immediately. You can also visit the nearest police station to 
-            file a report. Keep copies of important documents (passport, ARC) in a safe place.
-          </p>
+              <div className="border rounded-xl p-5">
+                <h3 className="text-xl font-bold text-black">1345</h3>
+                <p className="text-sm text-gray-600 mt-2">
+                  Immigration Office
+                </p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">Embassy Contact</h2>
-          <p className="text-foreground mb-4">
-            In serious emergencies, contact your country's embassy or consulate in Seoul. They 
-            can assist with lost passports, legal issues, and emergency evacuations. Keep their 
-            contact information saved in your phone.
-          </p>
+          {/* MEDICAL */}
+          <section className="max-w-3xl mb-12">
+            <h2 className="text-2xl font-semibold text-black mb-4">
+              Medical Emergencies
+            </h2>
 
-          <h2 className="text-2xl font-semibold text-foreground mb-3 mt-6">University Resources</h2>
-          <p className="text-foreground mb-4">
-            Your university likely has a campus security office (available 24/7) and an 
-            international student office that can provide assistance. Save these numbers in 
-            your phone and don't hesitate to reach out if you need help.
-          </p>
+            <h3 className="font-semibold mb-2">What to Do</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
+              <li>Call 119 immediately</li>
+              <li>Clearly state your location (address or landmark)</li>
+              <li>Explain the situation briefly</li>
+              <li>Follow dispatcher instructions</li>
+              <li>Prepare ARC and insurance info</li>
+            </ul>
+
+            <h3 className="font-semibold mb-2">Hospitals and Clinics</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Emergency rooms operate 24/7</li>
+              <li>Major hospitals have English-speaking staff</li>
+              <li>Pharmacies marked with green cross (약국)</li>
+              <li>Always carry ARC and insurance card</li>
+            </ul>
+          </section>
+
+          {/* DISASTERS */}
+          <section className="max-w-3xl mb-12">
+            <h2 className="text-2xl font-semibold text-black mb-4">
+              Natural Disasters
+            </h2>
+
+            <h3 className="font-semibold mb-2">Typhoons</h3>
+            <p className="text-gray-700 mb-3">
+              Common in summer. Stay indoors, avoid coastal areas, follow alerts.
+            </p>
+
+            <h3 className="font-semibold mb-2">Earthquakes</h3>
+            <p className="text-gray-700 mb-3">
+              Rare but possible. Drop, cover, and hold. Move away from buildings after shaking.
+            </p>
+
+            <h3 className="font-semibold mb-2">Heat Waves</h3>
+            <p className="text-gray-700">
+              Stay hydrated, avoid peak sun hours, use air-conditioned spaces.
+            </p>
+          </section>
+
+          {/* CONTACTS */}
+          <section className="max-w-3xl mb-12">
+            <h2 className="text-2xl font-semibold text-black mb-4">
+              Important Contacts
+            </h2>
+
+            <h3 className="font-semibold mb-2">Embassy</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
+              <li>Lost or stolen passport</li>
+              <li>Legal issues</li>
+              <li>Emergency assistance</li>
+            </ul>
+
+            <h3 className="font-semibold mb-2">University</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>International office</li>
+              <li>Campus security</li>
+              <li>Student health center</li>
+            </ul>
+          </section>
+
+          {/* APPS */}
+          <section className="max-w-3xl mb-12">
+            <h2 className="text-2xl font-semibold text-black mb-4">
+              Emergency Alerts
+            </h2>
+
+            <p className="text-gray-700">
+              Install the Korean emergency alert app (재난안전 앱) for real-time updates. All phones in Korea receive emergency alerts automatically, but having the app gives additional information in English.
+            </p>
+          </section>
+
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-card">
-        <div className="max-w-3xl mx-auto px-4 py-6 text-center text-sm text-muted-foreground">
-          <p>© 2024 Campus Helper Korea. For informational purposes only.</p>
+      <footer className="border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+          © 2026 KR Buddy. For informational purposes only.
         </div>
       </footer>
     </div>
