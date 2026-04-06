@@ -24,7 +24,7 @@ const Header = () => {
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/logo/kr-buddy.png"
+            src="public/logo/kr-buddy.png"
             alt="KR Buddy Logo"
             className="h-8 w-auto object-contain"
           />

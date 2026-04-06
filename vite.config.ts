@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && componentTagger()
   ].filter(Boolean),
-  base: "/campus-helper-korea/",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
