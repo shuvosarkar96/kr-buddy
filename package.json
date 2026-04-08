@@ -1,9 +1,9 @@
 {
-  "name": "campus-helper-korea",
+  "name": "kr-buddy",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://shuvosarkar96.github.io/campus-helper-korea/",
+  "homepage": "https://shuvosarkar96.github.io/kr-buddy/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

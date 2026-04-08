@@ -30,14 +30,14 @@ const Emergency = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
               <div className="border rounded-xl p-5">
-                <h3 className="text-xl font-bold text-red-600">119</h3>
+                <h3 className="text-xl font-bold text-black">119</h3>
                 <p className="text-sm text-gray-600 mt-2">
                   Fire and Ambulance
                 </p>
               </div>
 
               <div className="border rounded-xl p-5">
-                <h3 className="text-xl font-bold text-blue-700">112</h3>
+                <h3 className="text-xl font-bold text-black">112</h3>
                 <p className="text-sm text-gray-600 mt-2">
                   Police
                 </p>

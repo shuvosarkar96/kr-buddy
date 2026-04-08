@@ -1,6 +1,6 @@
-# Campus Helper Korea
+# KR Buddy
 
-Campus Helper Korea is a simple informational website created to help international students in South Korea.  
+KR Buddy is a simple informational website created to help international students in South Korea.  
 The website provides guidance on ARC registration, dormitory rules, campus life, emergency contacts, and basic student tips.
 
 ## Project Information
