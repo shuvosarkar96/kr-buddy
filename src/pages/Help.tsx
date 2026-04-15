@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 
@@ -44,90 +43,85 @@ const Help = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <Header />
+    <div className="max-w-6xl mx-auto px-4 py-12">
 
-      <main className="flex-1">
-        <div className="max-w-6xl mx-auto px-4 py-10">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold text-black mb-3">
+          Get Help
+        </h1>
 
-          <h1 className="text-3xl font-bold text-black mb-6">
-            Get Help
-          </h1>
+        <p className="text-gray-600 mb-10 leading-relaxed">
+          Ask anything about student life in Korea — visa, housing, jobs, or daily problems.
+        </p>
+      </div>
 
-          <p className="text-gray-700 mb-10 max-w-3xl">
-            Ask anything about student life in Korea — visa, housing, jobs, or daily problems.
-          </p>
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-3xl mx-auto space-y-5 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm"
+      >
 
-          <form onSubmit={handleSubmit} className="max-w-3xl space-y-6">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-200 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-700 transition"
+        />
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="w-full border px-4 py-3 rounded-lg"
-            />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          value={form.email}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-200 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-700 transition"
+        />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Your email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="w-full border px-4 py-3 rounded-lg"
-            />
+        <select
+          name="category"
+          value={form.category}
+          onChange={handleChange}
+          className="w-full border border-gray-200 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-700 transition bg-white"
+        >
+          <option>General</option>
+          <option>Visa</option>
+          <option>Housing</option>
+          <option>Jobs</option>
+          <option>Language</option>
+          <option>Emergency</option>
+        </select>
 
-            <select
-              name="category"
-              value={form.category}
-              onChange={handleChange}
-              className="w-full border px-4 py-3 rounded-lg"
-            >
-              <option>General</option>
-              <option>Visa</option>
-              <option>Housing</option>
-              <option>Jobs</option>
-              <option>Language</option>
-              <option>Emergency</option>
-            </select>
+        <textarea
+          name="message"
+          placeholder="Write your problem..."
+          value={form.message}
+          onChange={handleChange}
+          required
+          rows={5}
+          className="w-full border border-gray-200 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-700 transition resize-none"
+        />
 
-            <textarea
-              name="message"
-              placeholder="Write your problem..."
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              className="w-full border px-4 py-3 rounded-lg"
-            />
+        <div className="flex flex-col items-center gap-4 pt-2">
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 active:scale-[0.98] transition disabled:opacity-60"
+          >
+            {loading ? "Sending..." : "Submit"}
+          </button>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-blue-700 text-white px-6 py-3 rounded-lg"
-            >
-              {loading ? "Sending..." : "Submit"}
-            </button>
-
-            {success && (
-              <p className="text-green-600 text-sm">
-                Message saved successfully.
-              </p>
-            )}
-
-          </form>
-
+          {success && (
+            <p className="text-green-600 text-sm">
+              Message saved successfully.
+            </p>
+          )}
         </div>
-      </main>
 
-      <footer className="border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          © 2026 KR Buddy
-        </div>
-      </footer>
+      </form>
+
     </div>
   );
 };
