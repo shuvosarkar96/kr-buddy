@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const categories = [
   {
@@ -44,6 +45,14 @@ const categories = [
 ];
 
 const Index = () => {
+  const [search, setSearch] = useState("");
+
+  const filteredCategories = categories.filter((item) =>
+    (item.title + item.desc)
+      .toLowerCase()
+      .includes(search.toLowerCase())
+  );
+
   return (
     <div className="max-w-6xl mx-auto px-4">
 
@@ -65,6 +74,8 @@ const Index = () => {
           <input
             type="text"
             placeholder="Search guides (visa, jobs, housing...)"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
         </div>
@@ -85,18 +96,24 @@ const Index = () => {
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {categories.map((item, index) => (
-            <Link
-              key={index}
-              to={item.link}
-              className="border border-gray-200 rounded-xl p-5 hover:shadow-sm transition hover:-translate-y-1"
-            >
-              <h3 className="font-semibold text-black mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-gray-600">{item.desc}</p>
-            </Link>
-          ))}
+          {filteredCategories.length === 0 ? (
+            <p className="text-center text-gray-500 col-span-full">
+              No results found.
+            </p>
+          ) : (
+            filteredCategories.map((item, index) => (
+              <Link
+                key={index}
+                to={item.link}
+                className="border border-gray-200 rounded-xl p-5 hover:shadow-sm transition hover:-translate-y-1"
+              >
+                <h3 className="font-semibold text-black mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+              </Link>
+            ))
+          )}
         </div>
       </section>
 
