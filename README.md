@@ -1,42 +1,80 @@
 # KR Buddy
 
-KR Buddy is a simple informational website created to help international students in South Korea.  
-The website provides guidance on ARC registration, dormitory rules, campus life, emergency contacts, and basic student tips.
+KR Buddy is a web application designed to assist international students living in South Korea by providing essential information about student life, regulations, and emergency support.
 
-## Project Information
-- **Course:** Software Engineering  
-- **Technology:** React (Vite) + TypeScript  
-- **Project Type:** Static informational website  
+---
 
-## Purpose
-The purpose of this project is to apply software engineering principles by:
-- Defining clear system requirements
-- Designing a simple and structured user interface
-- Implementing a clean, maintainable frontend
-- Verifying functionality through testing
+## 📌 Project Overview
 
-## Features
-- ARC Guide
-- Dormitory Rules
-- Campus Life Information
-- Emergency Numbers
-- Student Tips
-- Simple and responsive navigation
+This project was developed as part of a Software Engineering course to demonstrate structured application design, modular frontend architecture, and gradual full-stack integration.
 
-## Tools Used
-- React (Vite)
-- TypeScript
-- CSS / Tailwind CSS (if applicable)
-- VS Code
+---
 
-## How to Run the Project
-Follow these steps to run the project locally:
+## 🎯 Objectives
 
-1. Make sure **Node.js** is installed.
-2. Open a terminal in the project folder.
-3. Install dependencies:
-   ```bash
-   npm install
-   npm run dev
-   http://localhost:5173 (example)```
-   
+* Provide clear guidance on important topics such as ARC registration and dormitory rules
+* Design a clean and responsive user interface
+* Implement maintainable and scalable frontend architecture
+* Gradually evolve into a full-stack application using Supabase
+
+---
+
+## ⚙️ Tech Stack
+
+* **Frontend:** React (Vite) + TypeScript
+* **Styling:** Tailwind CSS
+* **Backend Services:** Supabase (Database & API)
+
+---
+
+## 🚀 Features
+
+* 📄 ARC Registration Guide
+* 🏠 Dormitory Rules
+* 🎓 Campus Life Information
+* 🚨 Emergency Contacts
+* 💡 Student Tips
+* 📬 Help Form (data stored using Supabase)
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+ ├── components/    # Reusable UI components
+ ├── pages/         # Application pages
+ ├── hooks/         # Custom React hooks
+ ├── lib/           # Utility & Supabase config
+ └── App.tsx        # Main app entry
+```
+
+---
+
+## 🔄 Future Improvements
+
+This project is being developed incrementally across semesters:
+
+* 🔐 Admin dashboard for managing help requests
+* 🔑 Authentication system
+* 🤖 AI-powered assistant for student queries
+* 🌐 Multi-language support
+* 📧 Notification system
+
+---
+
+## 📚 Learning Outcomes
+
+* Component-based architecture design
+* State management and form handling
+* API integration with Supabase
+* Progressive enhancement from static to full-stack
+
+---
+
+## 🧑‍💻 Author
+
+Developed by Shuvo Sarkar
+GitHub: https://github.com/shuvosarkar96
+
+---

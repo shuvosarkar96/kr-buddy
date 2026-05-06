@@ -9,6 +9,8 @@ import Emergency from "./pages/Emergency";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
 import Language from "./pages/Language";
+import Admin from "./pages/Admin";
+import Login from "./pages/Login";
 
 const App = () => (
   <HashRouter>
@@ -22,6 +24,8 @@ const App = () => (
         <Route path="/emergency" element={<Emergency />} />
         <Route path="/language" element={<Language />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
 
       </Route>
 
