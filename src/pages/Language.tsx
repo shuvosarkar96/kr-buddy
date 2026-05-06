@@ -3,21 +3,22 @@ const Language = () => {
     <div className="max-w-6xl mx-auto px-4 py-12">
 
       <img
-        src="public/banners/language.webp"
+        src="/banners/language.webp"
         alt="Learn Korean"
         className="w-full h-60 object-cover rounded-xl mb-10"
       />
 
       <div className="max-w-3xl">
-        <h1 className="text-3xl font-bold text-foreground mb-4">
+        <h1 className="text-3xl font-bold text-black mb-4">
           Learn Basic Korean (Beginner Guide)
         </h1>
 
-        <p className="text-foreground mb-10 leading-relaxed">
+        <p className="text-gray-700 mb-10 leading-relaxed">
           Korean (Hangul) is simple and logical. You can learn to read it quickly.
           Start with the alphabet, then use the phrases in real-life situations.
         </p>
 
+        {/* ================= ALPHABET ================= */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">
             Korean Alphabet (Hangul)
@@ -53,7 +54,6 @@ const Language = () => {
             </table>
           </div>
 
-          {/* Double Consonants */}
           <h3 className="font-semibold mb-3">Double Consonants</h3>
           <div className="overflow-x-auto mb-6">
             <table className="w-full text-sm border border-gray-200">
@@ -69,7 +69,6 @@ const Language = () => {
             </table>
           </div>
 
-          {/* Vowels */}
           <h3 className="font-semibold mb-3">Basic Vowels</h3>
           <div className="overflow-x-auto mb-6">
             <table className="w-full text-sm border border-gray-200">
@@ -88,7 +87,6 @@ const Language = () => {
             </table>
           </div>
 
-          {/* Compound Vowels */}
           <h3 className="font-semibold mb-3">Compound Vowels</h3>
           <div className="overflow-x-auto mb-6">
             <table className="w-full text-sm border border-gray-200">
@@ -109,12 +107,7 @@ const Language = () => {
             </table>
           </div>
 
-          {/* Batchim */}
           <h3 className="font-semibold mb-3">Batchim (Final Consonants)</h3>
-          <p className="text-sm text-foreground mb-4">
-            Batchim is the final consonant in a syllable. It changes pronunciation slightly.
-          </p>
-
           <div className="overflow-x-auto">
             <table className="w-full text-sm border border-gray-200">
               <tbody>
@@ -136,89 +129,113 @@ const Language = () => {
 
         {/* ================= READING ================= */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            How Reading Works
-          </h2>
+          <h2 className="text-2xl font-semibold mb-4">How Reading Works</h2>
 
-          <ul className="list-disc list-inside text-foreground space-y-2">
-            <li>가 = ㄱ + ㅏ (ga)</li>
-            <li>나 = ㄴ + ㅏ (na)</li>
-            <li>한 = ㅎ + ㅏ + ㄴ (han)</li>
-          </ul>
-        </section>
-
-        {/* ================= PHRASES ================= */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            Essential Phrases
-          </h2>
-
-          <div className="space-y-2 text-foreground">
-            <p><b>Hello:</b> 안녕하세요</p>
-            <p><b>Thank you:</b> 감사합니다</p>
-            <p><b>Sorry:</b> 죄송합니다</p>
-            <p><b>Yes / No:</b> 네 / 아니요</p>
-            <p><b>Please:</b> 주세요</p>
-            <p><b>Excuse me:</b> 저기요</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border border-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="p-3 text-left">Example</th>
+                  <th className="p-3 text-left">Korean</th>
+                  <th className="p-3 text-left">Pronunciation</th>
+                  <th className="p-3 text-left">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t">
+                  <td className="p-3">Basic</td>
+                  <td className="p-3">가</td>
+                  <td className="p-3">ga</td>
+                  <td className="p-3">ㄱ + ㅏ</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="p-3">Basic</td>
+                  <td className="p-3">나</td>
+                  <td className="p-3">na</td>
+                  <td className="p-3">ㄴ + ㅏ</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="p-3">Final consonant</td>
+                  <td className="p-3">한</td>
+                  <td className="p-3">han</td>
+                  <td className="p-3">ㅎ + ㅏ + ㄴ</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            Daily Conversation
-          </h2>
+        {/* ================= COMMON TABLE COMPONENT STYLE ================= */}
+        {[
+          {
+            title: "Essential Phrases",
+            data: [
+              ["Hello", "안녕하세요", "annyeonghaseyo", "Greeting"],
+              ["Thank you", "감사합니다", "gamsahamnida", "Thanks"],
+              ["Sorry", "죄송합니다", "joesonghamnida", "Apology"],
+              ["Yes", "네", "ne", "Yes"],
+              ["No", "아니요", "aniyo", "No"],
+            ],
+          },
+          {
+            title: "Daily Conversation",
+            data: [
+              ["What is your name?", "이름이 뭐예요?", "ireumi mwoyeyo", "Ask name"],
+              ["Nice to meet you", "반갑습니다", "bangapseumnida", "Greeting"],
+              ["I don’t understand", "이해 못 해요", "ihae mot haeyo", "Confusion"],
+            ],
+          },
+          {
+            title: "Shopping & Food",
+            data: [
+              ["How much?", "이거 얼마예요?", "igeo eolmayeyo", "Price"],
+              ["I’ll take this", "이거 주세요", "igeo juseyo", "Buy"],
+              ["Too expensive", "너무 비싸요", "neomu bissayo", "Complaint"],
+            ],
+          },
+          {
+            title: "Transportation",
+            data: [
+              ["Where is station?", "역 어디예요?", "yeok eodiyeyo", "Location"],
+              ["How to go?", "어떻게 가요?", "eotteoke gayo", "Direction"],
+            ],
+          },
+          {
+            title: "Emergency",
+            data: [
+              ["Help!", "도와주세요!", "dowajuseyo", "Emergency"],
+              ["Call police", "경찰 불러주세요", "gyeongchal bulleojuseyo", "Help"],
+            ],
+          },
+        ].map((section, idx) => (
+          <section key={idx} className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
 
-          <div className="space-y-2 text-foreground">
-            <p>이름이 뭐예요? (What is your name?)</p>
-            <p>저는 ___ 입니다 (My name is...)</p>
-            <p>반갑습니다 (Nice to meet you)</p>
-            <p>이해 못 해요 (I don’t understand)</p>
-            <p>천천히 말해주세요 (Please speak slowly)</p>
-          </div>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            Shopping & Food
-          </h2>
-
-          <div className="space-y-2 text-foreground">
-            <p>이거 얼마예요? (How much?)</p>
-            <p>이거 주세요 (I’ll take this)</p>
-            <p>너무 비싸요 (Too expensive)</p>
-            <p>물 주세요 (Water please)</p>
-            <p>안 맵게 해주세요 (Not spicy)</p>
-          </div>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">
-            Transportation
-          </h2>
-
-          <div className="space-y-2 text-foreground">
-            <p>역 어디예요? (Where is station?)</p>
-            <p>어떻게 가요? (How to go?)</p>
-            <p>여기서 내려주세요 (Stop here)</p>
-            <p>표 한 장 주세요 (One ticket)</p>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">
-            Emergency
-          </h2>
-
-          <div className="space-y-2 text-foreground">
-            <p>도와주세요! (Help!)</p>
-            <p>경찰 불러주세요 (Call police)</p>
-            <p>의사 필요해요 (Need doctor)</p>
-            <p>길을 잃었어요 (I’m lost)</p>
-          </div>
-        </section>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border border-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="p-3 text-left">English</th>
+                    <th className="p-3 text-left">Korean</th>
+                    <th className="p-3 text-left">Pronunciation</th>
+                    <th className="p-3 text-left">Meaning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.data.map((row, i) => (
+                    <tr key={i} className="border-t">
+                      {row.map((cell, j) => (
+                        <td key={j} className="p-3">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
 
       </div>
-
     </div>
   );
 };

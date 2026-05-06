@@ -3,7 +3,7 @@ const ArcGuide = () => {
     <div className="max-w-6xl mx-auto px-4 py-12">
 
       <img
-        src="https://media.licdn.com/dms/image/v2/D4D12AQHu1MmQYDiB5g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1726442902225?e=1776902400&v=beta&t=YoCxoEJf9ODL2khm_b6ofVJs7nPTfG5xga-IJW8jjrM"
+        src="/banners/arc.webp"
         alt="ARC and documents"
         className="w-full h-60 object-cover rounded-xl mb-10"
       />

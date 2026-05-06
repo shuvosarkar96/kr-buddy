@@ -2,13 +2,11 @@
 
 KR Buddy is a web application designed to assist international students living in South Korea by providing essential information about student life, regulations, and emergency support.
 
----
 
 ## 📌 Project Overview
 
 This project was developed as part of a Software Engineering course to demonstrate structured application design, modular frontend architecture, and gradual full-stack integration.
 
----
 
 ## 🎯 Objectives
 
@@ -17,7 +15,6 @@ This project was developed as part of a Software Engineering course to demonstra
 * Implement maintainable and scalable frontend architecture
 * Gradually evolve into a full-stack application using Supabase
 
----
 
 ## ⚙️ Tech Stack
 
@@ -25,7 +22,6 @@ This project was developed as part of a Software Engineering course to demonstra
 * **Styling:** Tailwind CSS
 * **Backend Services:** Supabase (Database & API)
 
----
 
 ## 🚀 Features
 
@@ -36,7 +32,6 @@ This project was developed as part of a Software Engineering course to demonstra
 * 💡 Student Tips
 * 📬 Help Form (data stored using Supabase)
 
----
 
 ## 🗂️ Project Structure
 
@@ -49,7 +44,6 @@ src/
  └── App.tsx        # Main app entry
 ```
 
----
 
 ## 🔄 Future Improvements
 
@@ -61,7 +55,6 @@ This project is being developed incrementally across semesters:
 * 🌐 Multi-language support
 * 📧 Notification system
 
----
 
 ## 📚 Learning Outcomes
 
@@ -77,4 +70,3 @@ This project is being developed incrementally across semesters:
 Developed by Shuvo Sarkar
 GitHub: https://github.com/shuvosarkar96
 
----
